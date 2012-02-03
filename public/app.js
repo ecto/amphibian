@@ -25,7 +25,6 @@ $(document).ready(function () {
   });
 
   $(document).keydown(function (e) {
-    console.log(e);
     if (e.keyCode == 16) return;
     if (e.metaKey) return;
     var k = mapKey(e.which);
@@ -46,7 +45,6 @@ $(document).ready(function () {
   });
 
   document.onpaste = function (e) {
-    //console.log(arguments);
     $('<input id="tempPaste">').appendTo('#window').focus();
     setTimeout(function () {
       var t = $('#tempPaste').val();
@@ -94,34 +92,12 @@ function parse (raw) {
 }
 
 function mapKey (keyCode) {
-  var k = String.fromCharCode(keyCode);
+  var k;
+  switch (keyCode) {
+    case 189: k = '-'; break;
+    default: k = String.fromCharCode(keyCode);
+      break;
+  }
+  //console.log([keyCode, k]);
   return k;
-      /*
-      Enter 13
-      Up arrow 38
-      Down arrow 40
-      Left arrow 37
-      Right arrow 39
-      Escape 27
-      Spacebar 32
-      Ctrl 17
-      Alt 18
-      Tab 9
-      Shift 16
-      Caps-lock 20
-      Windows key 91
-      Windows option key 93
-      Backspace 8
-      Home 36
-      End 35
-      Insert 45
-      Delete 46
-      Page Up 33
-      Page Down 34
-      Numlock 144
-      F1-F12 112-123
-      Print-screen ??
-      Scroll-lock 145
-      Pause-break 19
-      */
 }
