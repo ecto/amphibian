@@ -94,10 +94,14 @@ function parse (raw) {
 function mapKey (keyCode) {
   var k;
   switch (keyCode) {
+    case 38: k = '\C-[[A'; break;
+    case 188: k = ','; break;
     case 189: k = '-'; break;
+    case 190: k = '.'; break;
+    case 191: k = '/'; break;
     default: k = String.fromCharCode(keyCode);
       break;
   }
-  //console.log([keyCode, k]);
+  console.log([keyCode, k]);
   return k;
 }
