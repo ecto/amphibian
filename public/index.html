@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<title>Amphibian</title>
+<script src="/jquery.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/app.js"></script>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+#window {
+  margin: 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#term {
+  font: 12px monospace;
+}
+</style>
+
+
+<style>
+/* 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed */
+.attribute-1 { font-weight: bold; }
+.attribute-4 { text-decoration: underline; }
+.attribute-5 { 
+  -webkit-animation: pulse 2s ease infinite;
+  -moz-animation: pulse 2s ease infinite;
+  -ms-animation: pulse 2s ease infinite;
+}
+.attribute-7 { }
+.attribute-8 { }
+
+@-webkit-keyframes pulse {
+ 0% { opacity: 1; }
+ 50% { opacity: 0; }
+ 100% { opacity: 1; }
+}
+@-moz-keyframes pulse {
+ 0% { opacity: 1; }
+ 50% { opacity: 0; }
+ 100% { opacity: 1; }
+}
+@-ms-keyframes pulse {
+ 0% { opacity: 1; }
+ 50% { opacity: 0; }
+ 100% { opacity: 1; }
+}
+
+/*
+30 - black
+31 - red
+32 - green
+33 - yellow
+34 - blue
+35 - magenta
+36 - cyan
+37 - white
+*/
+.text-30 { color: #000; }
+.text-31 { color: red; }
+.text-32 { color: green; }
+.text-33 { color: yellow; }
+.text-34 { color: blue; }
+.text-35 { color: magenta; }
+.text-36 { color: cyan; }
+.text-37 { color: #fff; }
+</style>
+
+
+</head>
+<body>
+  <div id="window">
+    <div id="term"></div>
+  </div>
+</body>
+</html>
