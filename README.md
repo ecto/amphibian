@@ -17,6 +17,10 @@ amp myServer -p 3000 &
 
 this only supports passwordless connections, so you have to have your `~/.ssh/config` set up properly
 
+##obligatory screenshot
+
+![](http://i.imgur.com/Pe6v7.png)
+
 ##license
 
 (The MIT License)
