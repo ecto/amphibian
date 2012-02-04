@@ -16,7 +16,8 @@
   "dependencies": {
     "director": "*",
     "broomstick": "*",
-    "socket.io": "*"
+    "socket.io": "*",
+    "optimist": "*"
   },
   "devDependencies": {},
   "optionalDependencies": {}
